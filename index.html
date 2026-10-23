@@ -4,50 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel Dashboard</title>
+
+    <title>Agriculture Tax Invoice</title>
+
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Excel Dashboard</h1>
-        <p>ArthaDisha Internship Project</p>
-    </header>
+    <div class="invoice-container">
 
-    <main class="dashboard">
-        <div class="card">
-            <h2>Total Sales</h2>
-            <p>₹25,000</p>
-        </div>
+        <!-- Company Header -->
+        <header class="company-header">
+            <div class="company-logo">AD</div>
 
-        <div class="card">
-            <h2>Total Orders</h2>
-            <p>150</p>
-        </div>
+            <div class="company-info">
+                <h1>ArthaDisha IT Consulting Services</h1>
+                <p>Arthadisha IT Services</p>
+                <p>Nashik, Maharashtra, India</p>
+                <p>Email: info@acspl.com</p>
+                <p>Phone: +91 9145631631</p>
+            </div>
+        </header>
 
-        <div class="card">
-            <h2>Customers</h2>
-            <p>85</p>
-        </div>
-    </main>
-</body>
+        <hr>
 
-</html>
-<!DOCTYPE html>
-<html lang="en">
+        <h2 class="invoice-title">TAX INVOICE</h2>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel Feature</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+        <!-- Invoice Details -->
+        <section class="invoice-info">
+            <div>
+                <h3>Invoice Details</h3>
+                <p><strong>Invoice No:</strong> AGRI-2026-001</p>
+                <p><strong>Date:</strong> 23 October 2026</p>
+            </div>
 
-<body>
-    <div class="container">
-        <h1>Excel Feature</h1>
-        <p>Welcome to my ArthaDisha internship project!</p>
-        <button>Get Started</button>
+            <div>
+                <h3>Client Details</h3>
+
+                <p><strong>Name:</strong> Rahul Patil</p>
+                <p><strong>Email:</strong> rahul@example.com</p>
+                <p><strong>Phone:</strong> 9876543210</p>
+                <p><strong>Address:</strong> Kopargaon, Maharashtra</p>
+
+                <p>
+                    <strong>State:</strong>
+                    <select id="client-state" name="client-state">
+                        <option value="">Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra" selected>Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+
+                    </select>
+                </p>
+            </div>
+        </section>
+
+        <!-- Agriculture Items -->
+        <section class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Rate (₹)</th>
+                        <th>Amount (₹)</th>
+                    </tr>
+                </thead>
+
+                <tbody id="invoice-items">
+                    <tr>
+                        <td>Wheat Seeds</td>
+                        <td><input type="number" class="qty" value="10" min="1"></td>
+                        <td><input type="number" class="rate" value="500" min="0"></td>
+                        <td class="amount">₹5,000.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Organic Fertilizer</td>
+                        <td><input type="number" class="qty" value="5" min="1"></td>
+                        <td><input type="number" class="rate" value="800" min="0"></td>
+                        <td class="amount">₹4,000.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Neem Oil Pesticide</td>
+                        <td><input type="number" class="qty" value="4" min="1"></td>
+                        <td><input type="number" class="rate" value="350" min="0"></td>
+                        <td class="amount">₹1,400.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Drip Irrigation Pipe</td>
+                        <td><input type="number" class="qty" value="3" min="1"></td>
+                        <td><input type="number" class="rate" value="1200" min="0"></td>
+                        <td class="amount">₹3,600.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Agriculture Sprayer</td>
+                        <td><input type="number" class="qty" value="2" min="1"></td>
+                        <td><input type="number" class="rate" value="1500" min="0"></td>
+                        <td class="amount">₹3,000.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Totals: IDs must match script.js -->
+        <section class="totals">
+            <p>
+                Subtotal:
+                <span id="subtotal">₹17,000.00</span>
+            </p>
+
+            <p>
+                GST (18%):
+                <span id="gst">₹3,060.00</span>
+            </p>
+
+            <h3>
+                Grand Total:
+                <span id="grand-total">₹20,060.00</span>
+            </h3>
+        </section>
+
+        <footer class="invoice-footer">
+            <p>Thank you for your business!</p>
+            <p>This invoice is for demonstration purposes.</p>
+        </footer>
+
     </div>
 </body>
 
